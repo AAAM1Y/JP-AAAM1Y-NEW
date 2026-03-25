@@ -1,0 +1,51 @@
+学python
+1. 变量 (Variable)
+定义：用来存储数据的容器
+例子：x = 5 中，x就是一个变量，存储了数值5
+2. 数据类型 (Data Types)
+整数 (Integer)：如 5, -3, 100
+浮点数 (Float)：如 3.14, -2.5, 0.001
+字符串 (String)：如 "hello", 'world'，用引号包围的文本
+布尔值 (Boolean)：True 或 False，表示真假
+3. 列表 (List)
+定义：有序的数据集合，用方括号表示
+例子：my_list = [1, 2, 3, 4, 5]
+4. 函数 (Function)
+定义：执行特定任务的代码块
+例子：
+
+python
+def greet(name):  # 定义函数
+    return f"Hello, {name}!"  # 返回值
+result = greet("Alice")  # 调用函数
+5. 循环 (Loop)
+for循环：重复执行代码块
+
+python
+for i in range(5):  # 重复5次
+    print(i)
+6. 条件语句 (Conditional Statement)
+if/else：根据条件执行不同代码
+
+python
+if x > 10:
+    print("x大于10")
+else:
+    print("x小于等于10")
+7. 字典 (Dictionary)
+定义：键值对的集合
+例子：person = {"name": "John", "age": 30}
+8. 方法 (Method)
+定义：属于对象的函数
+例子："hello".upper() 将字符串转为大写
+9. 模块 (Module)
+定义：包含Python代码的文件
+例子：import math 导入数学模块
+10. 类 (Class)
+定义：创建对象的模板
+例子：
+
+python
+class Person:
+    def __init__(self, name):
+        self.name = name
