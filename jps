@@ -304,8 +304,60 @@ JavaScript 有一些行为可能让开发者措手不及。这里有一个经典
 哪种数据类型的行为让你最感惊讶？
 你讲解变量与常量的区别给朋友时感觉如何？
 关于 JavaScript 的类型系统你发现的最有趣的事情是什么？
-你能想象用这些基础构建什么实际应用？
+// 1. 判断奇偶数
+function isEven(number) {
+    return number % 2 === 0;
+}
+function isOdd(number) {
+    return number % 2 !== 0;
+}
 
-💡 你已经打好了基础！ 了解数据类型就像学字母表为写故事做准备。你写的每个 JavaScript 程序都会用到这些基本概念。你现在拥有构建交互式网站、动态应用以及用代码解决实际问题的基石。欢迎来到奇妙的 JavaScript 世界！ 🎉
+console.log(isEven(4)); // true
+console.log(isOdd(5));  // true
 
-免责声明： 本文件使用人工智能翻译服务 Co-op Translator 进行翻译。虽然我们力求准确，但请注意自动翻译可能存在错误或不准确之处。应以原始语言的原版文件为权威来源。对于关键信息，建议寻求专业人工翻译。因使
+// 2. 循环计数器（例如轮播图、循环列表）
+const items = ['item1', 'item2', 'item3', 'item4'];
+let currentIndex = 0;
+
+function getNextIndex() {
+    currentIndex = (currentIndex + 1) % items.length;
+    return currentIndex;
+}
+
+console.log(getNextIndex()); // 1
+console.log(getNextIndex()); // 2
+console.log(getNextIndex()); // 3
+console.log(getNextIndex()); // 0 (回到开头)
+
+// 3. 时间计算（转换小时为12小时制）
+function convertTo12Hour(hour) {
+    if (hour === 0) return 12;
+    if (hour > 12) return hour % 12;
+    return hour;
+}
+
+console.log(convertTo12Hour(15)); // 3 (下午3点)
+console.log(convertTo12Hour(24)); // 12 (午夜12点)
+
+// 4. 分页计算（确定元素在第几页）
+const itemsPerPage = 10;
+const totalItems = 27;
+
+function getPageOfItem(itemIndex) {
+    return Math.floor(itemIndex / itemsPerPage) + 1;
+}
+
+function getPositionOnPage(itemIndex) {
+    return (itemIndex % itemsPerPage) + 1;
+}
+
+console.log("第25个元素在第几页:", getPageOfItem(24)); // 3
+console.log("第25个元素在该页的位置:", getPositionOnPage(24)); // 5
+
+// 5. 游戏开发中判断周期性事件
+function shouldTriggerEvent(currentFrame, eventInterval) {
+    return currentFrame % eventInterval === 0;
+}
+
+console.log(shouldTriggerEvent(30, 10)); // true (每10帧触发一次)
+console.log(shouldTriggerEvent(31, 10)); // false
